@@ -108,17 +108,7 @@ public class BeamCloudStorageSQL {
             THIS EXAMPLE USES INSERT IGNORE
          */
 
-        /*
-        movieRows.apply(JdbcIO.<MovieRating>write()
-                        // .withDataSourceConfiguration(JdbcIO.DataSourceConfiguration.create("com.mysql.cj.jdbc.Driver", "jdbc:mysql://35.222.3.146/test?cloudSqlInstance=corded-tensor-164401:us-central1:test-sql-csmith&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=sslLyCqGLff150yi&useSSL=false")
-                        .withDataSourceConfiguration(JdbcIO.DataSourceConfiguration.create(options.getJdbcDriver(),options.getJdbcUrl()) // to come from cmd line args
-                                .withUsername(options.getUsername()) // to come from cmd line args
-                                .withPassword(options.getPassword()) // to come from cmd line args
-                        )
-                        .withStatement("INSERT IGNORE INTO test.movies values(?,?,?)")
-                        .withPreparedStatementSetter(new SQLStatementSetter()));
-*/
-
+        
         // Run the pipeline and wait till it finishes before exiting
         pipeline.run().waitUntilFinish();
     }
